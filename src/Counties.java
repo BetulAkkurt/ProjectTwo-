@@ -11,14 +11,34 @@ public class Counties {
      * method should take a tree number(int) and return smallest number(int)
      * Write a Java method to find the smallest number among three numbers.
      */
+public static int smallestNumber(int a, int b, int c) {
+    if (a <= b && a <= c) {
+        return a;
+    } else if (b <= a && b <= c) {
+        return b;
 
+    } else {
+        return c;
+    }
+
+}
 
     /** Create a method
-     * method name is middleCharacter    <-------   METHOD NAME SHOULD BE AS THIS
-     * this method should take a String as parameter and return char
-     * Write a Java method to display the middle character of a string
+     * method name is middleCharacter    <-------   METHOD NAME SHOULD BE AS THIS.
+     * this method should take a String as parameter and return char.
+     * Write a Java method to display the middle character of a string.
      * if the string length is even number return 0
      */
+public char middleCharacter(String text) {
+
+    if (text.length() % 2 != 0){
+        return text.charAt(text.length()/2);
+    }else
+        return '0';
+
+
+
+}
 
 
     /** Create a method
@@ -28,7 +48,28 @@ public class Counties {
      * if the number is 2 return tuesday
      * if the number bigger then 7 then return -->> this is not a expected input
      */
+public static String dayofTheWeek(int number) {
+    String result="";
+    if (number == 1) {
+        result= "Monday";
+    } else if (number == 2) {
+        result = "Tuesday";
+    } else if (number == 3) {
+        result = "Wednesday";
+    } else if (number == 4) {
+        result = "Thursday";
+    } else if (number == 5) {
+        result = "Friday";
+    }else if (number == 6) {
+        result = "Saturday";
+    }else if (number == 7) {
+        result = "Sunday";
+    } else  {
+        result= "this is not a expected input";
+    }
+    return result;
 
+}
 
     /**
      * if CountThis String in the myCounties ArrayList then return how many of CountThis string in the myCounties
@@ -39,7 +80,15 @@ public class Counties {
         int result = 0;
         // START THE CODE FROM HERE
 
+        if (!myCountries.contains(CountThis)) {
+            return -1;
+        }
 
+        for (String a : myCountries) {
+            if (a.equals(CountThis)) {
+                result++;
+            }
+        }
         // CODE END HERE
         return result;
     }
@@ -50,7 +99,10 @@ public class Counties {
      * result should be ====>>>   brazil england USA
      */
     public ArrayList<String> sortArrayList(ArrayList<String> myCountries) {
+            for( String myCountry : myCountries){
 
+            }
+        Collections.sort(myCountries);
 
         return myCountries;
     }
@@ -62,9 +114,10 @@ public class Counties {
      */
     public ArrayList<String> reverseTheList(ArrayList<String> myCountries) {
         ArrayList<String> reverse = new ArrayList<>();
-//       start writing the code here
+//       start writing the code here;
 
-
+        Collections.reverse(myCountries);
+        reverse.addAll(myCountries);
 //        ends here
         return reverse;
     }
@@ -82,21 +135,24 @@ public class Counties {
      */
     public boolean isFirstArrayListContainsSecondArrayList(ArrayList<String> firstArray, ArrayList<String> SecondAray) {
 
+        if (firstArray.retainAll(SecondAray)) {
 
-        return false;
+            return false;
+        } else
+            return true;
     }
+        /**
+         * if ArrayList myCountries have a firstCountry then replace it with a secondCountry
+         * for Example myCountries list ===========>>>> Brazil USA Mexico USA
+         * firstCountry =======>>>> USA
+         * SecondCounty========>>> Canada
+         * result should be Brazil Canada Mexico Canada
+         */
+        public ArrayList<String> replaceTheCountry (ArrayList < String > myCountries, String firstCountry, String
+        SecondCounry){
 
-    /**
-     * if ArrayList myCountries have a firstCountry then replace it with a secondCountry
-     * for Example myCountries list ===========>>>> Brazil USA Mexico USA
-     * firstCountry =======>>>> USA
-     * SecondCounty========>>> Canada
-     * result should be Brazil Canada Mexico Canada
-     */
-    public ArrayList<String> replaceTheCountry(ArrayList<String> myCountries, String firstCountry, String SecondCounry) {
 
+            return myCountries;
+        }
 
-        return myCountries;
     }
-
-}

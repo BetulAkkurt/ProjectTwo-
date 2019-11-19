@@ -200,52 +200,10 @@ public class CountriesTest {
 
     }
 
-    @Test
-    public void getTotal1() {
-
-        String myNum = "5421312341";
 
 
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = 10;
 
 
-        Assert.assertTrue(myTotal == expected);
-
-
-    }
-
-    @Test
-    public void getTotal2() {
-
-        String myNum = "5654656213";
-
-
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = 29;
-
-
-        Assert.assertTrue(myTotal == expected);
-
-
-    }
-
-    @Test
-    public void getTotal3() {
-
-        String myNum = "00000000000";
-
-
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = -1;
-
-
-        Assert.assertTrue(myTotal == expected);
-
-    }
 
     @Test
     public void isfirstArrayListContainssecondArrayList1() {
@@ -447,7 +405,7 @@ public class CountriesTest {
     @Test
     public void middleCharater1() {
 
-        char i1 = c1.middleCharater("HeyDude");
+        char i1 = c1.middleCharacter("HeyDude");
 
         Assert.assertTrue(i1 == 'D');
 
@@ -456,7 +414,7 @@ public class CountriesTest {
     @Test
     public void middleCharater2() {
 
-        char i1 = c1.middleCharater("Cerry");
+        char i1 = c1.middleCharacter("Cerry");
 
         Assert.assertTrue(i1 == 'r');
 
@@ -466,7 +424,7 @@ public class CountriesTest {
     @Test
     public void middleCharater3() {
 
-        char i1 = c1.middleCharater("Ring");
+        char i1 = c1.middleCharacter("Ring");
 
         Assert.assertTrue(i1 == '0');
 
@@ -475,7 +433,7 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek1() {
 
-        String i1 = c1.dayoftheWeek(1);
+        String i1 = c1.dayofTheWeek(1);
 
         Assert.assertTrue(i1.equals("Monday"));
 
@@ -485,7 +443,7 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek2() {
 
-        String i1 = c1.dayoftheWeek(5);
+        String i1 = c1.dayofTheWeek(5);
 
         Assert.assertTrue(i1.equals("Friday"));
 
@@ -495,7 +453,7 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek3() {
 
-        String i1 = c1.dayoftheWeek(0);
+        String i1 = c1.dayofTheWeek(0);
 
         Assert.assertTrue(i1.equals("this is not a expected input"));
 
@@ -504,7 +462,7 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek4() {
 
-        String i1 = c1.dayoftheWeek(12);
+        String i1 = c1.dayofTheWeek(12);
 
         Assert.assertTrue(i1.equals("this is not a expected input"));
 
